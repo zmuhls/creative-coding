@@ -25,7 +25,7 @@ export function molnarInterruptions(container) {
   const stop = rafLoop((t) => {
     const { width, height } = resize();
 
-    ctx.fillStyle = '#f7f5ef';
+    ctx.fillStyle = '#0a0a0a';
     ctx.fillRect(0, 0, width, height);
 
     const cols = 48;
@@ -39,7 +39,7 @@ export function molnarInterruptions(container) {
     const pulse = 0.06 * baseR * Math.sin(t / 900);
     const voidR = baseR + pulse;
 
-    ctx.strokeStyle = '#101010';
+    ctx.strokeStyle = '#c0c0c0';
     ctx.lineWidth = 2;
 
     // Uniform-ish angle with tiny drift (order)
@@ -62,14 +62,14 @@ export function molnarInterruptions(container) {
     }
 
     // Draw void outline lightly for readability
-    ctx.strokeStyle = 'rgba(0,0,0,0.12)';
+    ctx.strokeStyle = 'rgba(255,255,255,0.12)';
     ctx.lineWidth = 2;
     ctx.beginPath();
     ctx.arc(cx, cy, voidR, 0, Math.PI * 2);
     ctx.stroke();
 
     // Instruction hint
-    ctx.fillStyle = 'rgba(0,0,0,0.55)';
+    ctx.fillStyle = 'rgba(255,255,255,0.5)';
     ctx.font = '14px ui-monospace, SFMono-Regular, Menlo, monospace';
     ctx.fillText('Drag to move interruption', 16, height - 18);
   });
