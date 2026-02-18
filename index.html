@@ -395,13 +395,11 @@ Output: return single HTML only (no markdown/explanation).</pre>
           <li>Create an account; await pending approval; then sign in</li>
           <li>Confirm you're in by posting a 👍 in the chat</li>
           <li>Choose a model: GLM 5 or Kimi K2.5 (MoE)</li>
-          <li>Open the Configuration panel (right side)</li>
-          <li>Paste the system prompt; set temperature + max tokens</li>
         </ol>
         <p class="note">Optional model registry: <a href="https://ailab.gc.cuny.edu/models/" target="_blank" rel="noreferrer">ailab.gc.cuny.edu/models</a></p>
       </div>
       <div class="stage stageCenter" aria-label="CUNY AI Lab Sandbox screenshot">
-        <img src="./assets/openwebui-kimi-k2.5.jpg" alt="CUNY AI Lab Sandbox interface showing the model picker (MoonshotAI: Kimi K2.5)" class="stageImg" style="object-fit:cover;object-position:48% center;height:100%;max-height:100%;width:100%;max-width:100%;border-radius:0;" />
+        <img src="./assets/openwebui-kimi-k2.5.jpg" alt="CUNY AI Lab Sandbox interface showing the model picker (MoonshotAI: Kimi K2.5)" class="stageImg" style="object-fit:cover;object-position:45% center;height:100%;max-height:100%;width:100%;max-width:100%;border-radius:0;" />
       </div>
     </section>
 
@@ -409,12 +407,14 @@ Output: return single HTML only (no markdown/explanation).</pre>
     <section class="slide" data-artifact="starfield">
       <div class="content">
         <h1>Activity 1 (10m)</h1>
-        <h2>One prompt, one artifact</h2>
+        <h2>Constrained Generation</h2>
         <ul>
-          <li>Paste the Activity 1 system prompt</li>
-          <li>Set temperature 0.9; max tokens 4096</li>
-          <li>Write one prompt; generate once; no edits</li>
-          <li>Observe: what did the model assume?</li>
+          <li>Open the Configuration panel (right side)</li>
+          <li>Add a system prompt: "You are a creative coding assistant. Follow constraints exactly as specified. Output single HTML files with embedded CSS and JavaScript."</li>
+          <li>Try user prompts with specific limits:</li>
+          <li style="margin-left: 20px;">"Create a rotating spiral using only triangles"</li>
+          <li style="margin-left: 20px;">"Build a rain animation with exactly 4 colors"</li>
+          <li style="margin-left: 20px;">"Make generative art that tiles like wallpaper"</li>
         </ul>
       </div>
       <div class="stage" aria-label="Starfield stage"></div>
@@ -424,13 +424,11 @@ Output: return single HTML only (no markdown/explanation).</pre>
     <section class="slide">
       <div class="content">
         <h1>Activity 2 (15m)</h1>
-        <h2>Iterate and refine</h2>
+        <h2>Iterate and Refine</h2>
         <ul>
-          <li>Switch to the Activity 2 system prompt</li>
-          <li>Test the artifact; describe what changed</li>
-          <li>Request one change at a time; regenerate</li>
-          <li>Complete ≥3 rounds: generate → test → revise</li>
-          <li>Keep a log: prompt + parameters + outcome</li>
+          <li>Keep your previous result and refine it through conversation</li>
+          <li>Try follow-up prompts like: "Add mouse interaction", "Make the movement faster", "Change the color palette to sunset tones"</li>
+          <li>Practice the back-and-forth refinement process</li>
         </ul>
       </div>
       <div class="stage stageCenter" aria-label="Activity 2 prompt">
@@ -445,14 +443,13 @@ Output: return single HTML only (no markdown/explanation).</pre>
     <section class="slide" data-artifact="constraintGrid">
       <div class="content">
         <h1>Activity 3 (15m)</h1>
-        <h2>Write the rules, not the request</h2>
+        <h2>Parameter Exploration</h2>
         <ul>
-          <li>Write a constraint-based system prompt</li>
-          <li>Choose a temperature range; explore variation</li>
-          <li>Generate 3 versions; curate your favorite</li>
-          <li>Explain your rules like a score or recipe</li>
-          <li>Notice how constraints shape the aesthetic</li>
-          <li>Prompt scaffold: see <a href="https://github.com/zmuhls/creative-coding/blob/main/prompts.md" target="_blank" rel="noreferrer">prompts.md</a></li>
+          <li>Experiment with max tokens (response length) and temperature (randomness, 0.0-2.0)</li>
+          <li>Try the same prompt with different settings:</li>
+          <li style="margin-left: 20px;">Temperature 0.1 (predictable) vs 1.8 (creative)</li>
+          <li style="margin-left: 20px;">Max tokens 1024 (concise) vs 4096 (detailed)</li>
+          <li>How do these parameters change the AI's creative output?</li>
         </ul>
       </div>
       <div class="stage" aria-label="Constraint grid artifact"></div>

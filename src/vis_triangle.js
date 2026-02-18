@@ -113,11 +113,11 @@ export function triangle(container) {
     ctx.font = `${lblFont}px ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto`;
     const narrow = width < 500;
     ctx.textAlign = 'center';
-    ctx.fillText(narrow ? 'Rules' : 'Rules (System Prompt)', A.x, A.y - lblFont * 0.8);
+    ctx.fillText('Rules', A.x, A.y - lblFont * 0.8);
     ctx.textAlign = 'left';
-    ctx.fillText(narrow ? 'Randomness' : 'Randomness (Temperature)', B.x, B.y + lblFont * 1.5);
+    ctx.fillText('Randomness', B.x, B.y + lblFont * 1.5);
     ctx.textAlign = 'right';
-    ctx.fillText(narrow ? 'Interpretation' : 'Interpretation (Curation)', C.x, C.y + lblFont * 1.5);
+    ctx.fillText('Interpretation', C.x, C.y + lblFont * 1.5);
 
     // Draggable point
     ctx.fillStyle = 'rgba(255,255,255,0.95)';

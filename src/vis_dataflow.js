@@ -66,8 +66,8 @@ export function dataFlow(container) {
     const { width: W, height: H } = resize();
 
     // --- Layout (responsive) ---
-    const compact = W < 420;
-    const labelX = compact ? W * 0.26 : W * 0.18;
+    const compact = W < 480;
+    const labelX = compact ? W * 0.32 : W * 0.22;
     const modelCX = compact ? W * 0.52 : W * 0.44;
     const modelCY = H * 0.50;
     const modelR = Math.min(W, H) * 0.08;
