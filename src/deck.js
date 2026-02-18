@@ -65,21 +65,7 @@ export function bootDeck() {
   document.addEventListener('keydown', onKey);
   window.addEventListener('hashchange', onHash);
 
-  // Mobile support: tap left/right half to navigate.
-  function onTap(e) {
-    if (isInteractiveTarget(e.target)) return;
-
-    // Ignore taps that start inside the stage; artifacts often need pointer input.
-    const slide = slides[idx];
-    const stage = slide && slide.querySelector('.stage');
-    if (stage && e.target instanceof Node && stage.contains(e.target)) return;
-
-    const x = (e.clientX ?? (e.touches && e.touches[0] && e.touches[0].clientX) ?? 0);
-    if (x < window.innerWidth * 0.35) prev();
-    else next();
-  }
-
-  // Mobile support: swipe left/right.
+  // Mobile support: swipe left/right only — no tap-to-advance.
   let touchStartX = 0;
   let touchStartY = 0;
   function onTouchStart(e) {
@@ -106,8 +92,6 @@ export function bootDeck() {
     else prev();
   }
 
-  // Use pointerup so it works for touch + mouse.
-  document.addEventListener('pointerup', onTap);
   document.addEventListener('touchstart', onTouchStart, { passive: true });
   document.addEventListener('touchend', onTouchEnd, { passive: true });
 
@@ -121,7 +105,6 @@ export function bootDeck() {
   return () => {
     document.removeEventListener('keydown', onKey);
     window.removeEventListener('hashchange', onHash);
-    document.removeEventListener('pointerup', onTap);
     document.removeEventListener('touchstart', onTouchStart);
     document.removeEventListener('touchend', onTouchEnd);
     for (const unmount of mounted.values()) { try { unmount(); } catch {} }

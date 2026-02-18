@@ -277,22 +277,22 @@
     <section class="slide">
       <div class="content">
         <h1>Creative Coding Today</h1>
-        <h2>p5.js + browser as canvas</h2>
+        <h2>Web browser as canvas</h2>
         <ul>
-          <li>Use the browser as a portable art canvas</li>
-          <li>Learn with p5.js; ship with plain HTML/JS</li>
-          <li>Prefer single-file artifacts you can share</li>
-          <li>Keep tools lightweight: no build step</li>
+          <li>Frames the browser as a portable art canvas</li>
+          <li>Prefers portable, single-file artifacts</li>
+          <li>Keeps tools lightweight: no build step, no account</li>
+          <li>LLMs generate single-file artifacts that open in any browser</li>
         </ul>
       </div>
-      <div class="stage stageCompare" aria-label="Tooling comparison">
-        <div class="col">
-          <div class="title">p5.js</div>
-          <div class="desc">Start fast with friendly drawing primitives.</div>
-        </div>
-        <div class="col">
-          <div class="title">Vanilla HTML/CSS/JS</div>
-          <div class="desc">Ship single-file sketches; run anywhere instantly.</div>
+      <div class="stage stageCenter" aria-label="Web stack metaphors">
+        <div class="stageInner">
+          <div class="stageListTitle">The web stack</div>
+          <ul class="stageList">
+            <li><strong>HTML</strong> — foundation and walls; structure that holds everything up</li>
+            <li><strong>CSS</strong> — paint, furniture, curtains; what makes it look like your place</li>
+            <li><strong>JavaScript</strong> — light switches, doors, plumbing; parts that respond when you interact</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -318,12 +318,12 @@
       <div class="content">
         <h1>Vibe Coding</h1>
         <h2>Prompts as prototypes</h2>
+        <p style="font-style:italic; font-size:clamp(15px,1.7vw,20px); color:var(--muted); margin:0 0 16px; line-height:1.45;">"Fully giving in to the vibes, embracing exponentials, and forgetting that the code even exists." <span style="opacity:0.6; font-style:normal;">— Andrej Karpathy, Feb 2025</span></p>
         <ul>
           <li>Prototype with prompts; test in the browser</li>
           <li>Generate fast; evaluate with your own eyes</li>
           <li>Contrast: "no-review" vs reviewed iteration</li>
           <li>Adopt the mode that matches your goal</li>
-          <li>Attribute "vibe coding" to Karpathy (Feb 2025)</li>
         </ul>
       </div>
       <div class="stage" aria-label="Spectrum stage"></div>
@@ -426,7 +426,7 @@ Output: return single HTML only (no markdown/explanation).</pre>
     </section>
 
     <!-- Slide 13 -->
-    <section class="slide">
+    <section class="slide" data-artifact="constraintGrid">
       <div class="content">
         <h1>Activity 3 (15m)</h1>
         <h2>Write the rules, not the request</h2>
@@ -436,41 +436,14 @@ Output: return single HTML only (no markdown/explanation).</pre>
           <li>Generate 3 versions; curate your favorite</li>
           <li>Explain your rules like a score or recipe</li>
           <li>Notice how constraints shape the aesthetic</li>
+          <li>Prompt scaffold: see <a href="./prompts.md" target="_blank" rel="noreferrer">prompts.md</a></li>
         </ul>
       </div>
-      <div class="stage stageCenter" aria-label="Activity 3 rules">
-        <pre>Copy/paste rules:
-
-1) Single HTML with inline CSS+JS
-2) Canvas only; no libraries
-3) Grid ≥ 100 elements
-4) Vary property by distance from center
-5) Exactly one randomness source
-6) Only 3 colors
-7) Fill viewport
-8) Animate with requestAnimationFrame
-
-Return HTML only</pre>
-      </div>
+      <div class="stage" aria-label="Constraint grid artifact"></div>
     </section>
 
     <!-- Slide 14 -->
-    <section class="slide" data-artifact="triangle">
-      <div class="content">
-        <h1>Reflection</h1>
-        <h2>Map activities to triangle</h2>
-        <ul>
-          <li>Locate Activity 1 near Interpretation</li>
-          <li>Locate Activity 2 between Rules and Interpretation</li>
-          <li>Locate Activity 3 near Rules (then curate)</li>
-          <li>Ask: what changed-rules, randomness, or judgment?</li>
-        </ul>
-      </div>
-      <div class="stage" aria-label="Triangle reflection stage"></div>
-    </section>
-
-    <!-- Slide 15 -->
-    <section class="slide">
+    <section class="slide" data-artifact="reflection">
       <div class="content">
         <h1>Takeaways</h1>
         <h2>Keep what's portable</h2>
@@ -480,17 +453,9 @@ Return HTML only</pre>
           <li>Share artifacts as single-page HTML sketches</li>
           <li>Treat curation as part of the creative act</li>
         </ul>
+        <p style="margin-top:20px; font-size:clamp(14px,1.5vw,18px); color:var(--muted);">Save the recipe: system prompt · model + temp + max tokens · the HTML file (with a date)</p>
       </div>
-      <div class="stage stageCenter" aria-label="Save the recipe">
-        <div class="stageInner">
-          <div class="stageListTitle">Save the recipe</div>
-          <ul class="stageList">
-            <li>System prompt</li>
-            <li>Model + temperature + max tokens</li>
-            <li>The HTML file (with a date)</li>
-          </ul>
-        </div>
-      </div>
+      <div class="stage" aria-label="Activity reflection triangle"></div>
     </section>
 
     <!-- Slide 16 -->
@@ -499,8 +464,8 @@ Return HTML only</pre>
         <h1>Resources</h1>
         <h2>Links, citations, and prompts</h2>
         <ul>
-          <li>System prompts + points of departure: <a href="https://github.com/milwrite/quimbot/blob/main/docs/itp-lab/prompts.md" target="_blank" rel="noreferrer">prompts.md</a></li>
-          <li>Slide outline (markdown): <a href="https://github.com/milwrite/quimbot/blob/main/docs/itp-lab/slides.md" target="_blank" rel="noreferrer">slides.md</a></li>
+          <li>System prompts + points of departure: <a href="https://github.com/zmuhls/creative-coding/blob/main/prompts.md" target="_blank" rel="noreferrer">prompts.md</a></li>
+          <li>Slide outline (markdown): <a href="https://github.com/zmuhls/creative-coding/blob/main/slides.md" target="_blank" rel="noreferrer">slides.md</a></li>
           <li>Models (GLM 5 / Kimi K2.5): <a href="https://ailab.gc.cuny.edu/models/" target="_blank" rel="noreferrer">ailab.gc.cuny.edu/models</a></li>
           <li>Full sources list (Appendix D): see GitHub folder link below</li>
         </ul>

@@ -8,12 +8,11 @@ export function schotter(container) {
 
   function draw() {
     ({ width, height } = resize());
-    ctx.clearRect(0, 0, width, height);
-    ctx.fillStyle = '#ffffff';
+    ctx.fillStyle = '#0a0a0a';
     ctx.fillRect(0, 0, width, height);
 
-    ctx.strokeStyle = '#111';
-    ctx.lineWidth = 2;
+    ctx.strokeStyle = '#c0c0c0';
+    ctx.lineWidth = 1;
 
     const COLS = 12;
     const ROWS = 22;
@@ -26,9 +25,9 @@ export function schotter(container) {
     for (let row = 0; row < ROWS; row++) {
       for (let col = 0; col < COLS; col++) {
         const disorder = row / (ROWS - 1);
-        const angle = (Math.random() - 0.5) * disorder * 0.9;
-        const dx = (Math.random() - 0.5) * disorder * size * 0.8;
-        const dy = (Math.random() - 0.5) * disorder * size * 0.8;
+        const angle = (Math.random() - 0.5) * disorder * Math.PI;
+        const dx = (Math.random() - 0.5) * disorder * size;
+        const dy = (Math.random() - 0.5) * disorder * size;
         const cx = pad + col * size + size / 2 + dx;
         const cy = pad + row * size + size / 2 + dy;
 
