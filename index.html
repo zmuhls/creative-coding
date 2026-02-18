@@ -193,7 +193,12 @@
       .content li { margin: 6px 0; }
       .stage pre { max-height: 42vh; }
       .stageCompare .col { padding: 14px 12px; }
+      .desktop-only { display: none; }
+      .mobile-only { display: inline; }
     }
+
+    .mobile-only { display: none; }
+    .desktop-only { display: inline; }
   </style>
 </head>
 <body>
@@ -337,7 +342,7 @@
         <h1>Behind the Scenes</h1>
         <h2>How models learn to code</h2>
         <ul>
-          <li>Trained on public code: GitHub, Stack Overflow, documentation</li>
+          <li>Trained on public code: GitHub, <span class="desktop-only">Stack Overflow</span><span class="mobile-only">SO</span>, documentation</li>
           <li>Learns patterns, not copy-paste</li>
           <li>A prompt triggers pattern matching across training data</li>
           <li>Output is probabilistic: same prompt can yield different results</li>
@@ -427,7 +432,10 @@ Output: return single HTML only (no markdown/explanation).</pre>
         <h2>Iterate and Refine</h2>
         <ul>
           <li>Keep your previous result and refine it through conversation</li>
-          <li>Try follow-up prompts like: "Add mouse interaction", "Make the movement faster", "Change the color palette to sunset tones"</li>
+          <li>Try follow-up prompts like:</li>
+          <li style="margin-left: 20px;">"Add mouse interaction"</li>
+          <li style="margin-left: 20px;">"Make the movement faster"</li>
+          <li style="margin-left: 20px;">"Change the color palette to sunset tones"</li>
           <li>Practice the back-and-forth refinement process</li>
         </ul>
       </div>
