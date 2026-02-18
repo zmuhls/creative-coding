@@ -8,6 +8,7 @@ import { boids } from './vis_boids.js';
 import { flowField } from './vis_flowfield.js';
 import { constraintGrid } from './vis_constraint_grid.js';
 import { vibeCoding } from './vis_vibecoding.js';
+import { dataFlow } from './vis_dataflow.js';
 
 export const artifacts = {
   tenPrint,
@@ -20,4 +21,5 @@ export const artifacts = {
   flowField,
   constraintGrid,
   vibeCoding,
+  dataFlow,
 };
