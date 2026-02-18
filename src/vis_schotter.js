@@ -52,10 +52,16 @@ export function schotter(container) {
 
   draw();
 
+  // Redraw immediately on resize so the canvas isn't left blank
+  // until the 5-second interval fires.
+  const ro = new ResizeObserver(() => draw());
+  ro.observe(container);
+
   const interval = setInterval(draw, 5000);
 
   return () => {
     clearInterval(interval);
+    ro.disconnect();
     destroy();
   };
 }
