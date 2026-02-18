@@ -39,6 +39,7 @@ export function tenPrint(container) {
     y = 0;
     phase = 'draw';
     clear();
+    caption();
     applyStyle();
   }
 
