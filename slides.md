@@ -113,7 +113,7 @@ Stage text (example prompt scaffold):
 
 * Copy/paste prompt scaffold:  
 * You are a creative coder.  
-* Constraints: vanilla JS only; Canvas; full viewport; no external libs.  
+* Constraints: vanilla JS only; Canvas; full viewport; no external libraries.  
 * Aesthetic: monochrome; geometric; early computer art.  
 * Tech: requestAnimationFrame; mouse interaction.  
 * Output: return single HTML only (no markdown/explanation).
