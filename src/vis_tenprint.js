@@ -8,6 +8,16 @@ export function tenPrint(container) {
   let { width, height } = resize();
   const SIZE = 22;
   let x = 0, y = 0;
+  let paused = false;
+  let pauseUntil = 0;
+
+  function caption() {
+    const fontSize = Math.max(12, Math.min(width, height) * 0.028);
+    ctx.font = `${fontSize}px ui-monospace, SFMono-Regular, Menlo, monospace`;
+    ctx.fillStyle = 'rgba(255,255,255,0.5)';
+    ctx.textAlign = 'center';
+    ctx.fillText('10 PRINT CHR$(205.5+RND(1)); : GOTO 10 (1982)', width / 2, height - fontSize);
+  }
 
   function clear() {
     ctx.fillStyle = '#050b07';
@@ -29,12 +39,23 @@ export function tenPrint(container) {
     ({ width, height } = resize());
     x = 0;
     y = 0;
+    paused = false;
     clear();
     applyStyle();
   });
   ro.observe(container);
 
-  const stop = rafLoop(() => {
+  const stop = rafLoop((t) => {
+    // Hold the completed maze on screen before restarting.
+    if (paused) {
+      if (t < pauseUntil) return;
+      paused = false;
+      x = 0;
+      y = 0;
+      clear();
+      applyStyle();
+    }
+
     for (let i = 0; i < 120; i++) {
       if (Math.random() > 0.5) {
         ctx.beginPath();
@@ -49,7 +70,12 @@ export function tenPrint(container) {
       }
       x += SIZE;
       if (x >= width) { x = 0; y += SIZE; }
-      if (y >= height) { y = 0; clear(); applyStyle(); }
+      if (y >= height) {
+        caption();
+        paused = true;
+        pauseUntil = t + 5000;
+        return;
+      }
     }
   });
 
