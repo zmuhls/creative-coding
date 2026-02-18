@@ -109,14 +109,13 @@ This workshop ties together creative coding and "vibe coding" with generative AI
 * Require motion \+ interaction: animation loop \+ input  
 * Demand a runnable deliverable: single HTML only
 
-Stage text (example prompt scaffold):
+Sample prompt:
 
-* Copy/paste prompt scaffold:  
-* You are a creative coder.  
-* Constraints: vanilla JS only; Canvas; full viewport; no external libraries.  
-* Aesthetic: monochrome; geometric; early computer art.  
-* Tech: requestAnimationFrame; mouse interaction.  
-* Output: return single HTML only (no markdown/explanation).
+Role: You are a creative coder.
+Constraints: vanilla JS only; Canvas; full viewport; no external libraries.
+Aesthetic: monochrome; geometric; early computer art.
+Tech: requestAnimationFrame; mouse interaction.
+Output: return single HTML only (no markdown/explanation).
 
 # **Slide 10**
 
@@ -142,12 +141,19 @@ Stage text:
 
 ## **Activity 1 (10m)**
 
-### **One prompt, one artifact**
+### **Constrained Generation**
 
-* Paste the Activity 1 system prompt  
-* Set temperature 0.9; max tokens 4096  
-* Write one prompt; generate once; no edits  
-* Observe: what did the model assume?
+* Open the Configuration panel (right side)
+* Add a system prompt:
+  
+  Role: You are a creative coding assistant.
+  Constraints: Follow constraints exactly as specified.
+  Output: Single HTML files with embedded CSS and JavaScript.
+  
+* Try user prompts with specific limits:
+  * "Create a rotating spiral using only triangles"
+  * "Build a rain animation with exactly 4 colors"
+  * "Make generative art that tiles like wallpaper"
 
 ---
 
@@ -155,15 +161,14 @@ Stage text:
 
 ## **Activity 2 (15m)**
 
-### **Iterate and refine**
+### **Iterate and Refine**
 
-* Switch to the Activity 2 system prompt  
-* Test the artifact; describe what changed  
-* Request one change at a time; regenerate  
-* Complete ≥3 rounds: generate → test → revise  
-* Keep a log: prompt \+ parameters \+ outcome
-
-Example: "Keep the artifact, but add trails / change palette / add speed control UI." Re-test each full HTML output.
+* Keep your previous result and refine it through conversation
+* Try follow-up prompts like:
+  * "Add mouse interaction"
+  * "Make the movement faster"
+  * "Change the color palette to sunset tones"
+* Practice the back-and-forth refinement process
 
 ---
 
@@ -171,26 +176,13 @@ Example: "Keep the artifact, but add trails / change palette / add speed control
 
 ## **Activity 3 (15m)**
 
-### **Write the rules, not the request**
+### **Parameter Exploration**
 
-* Write a constraint-based system prompt  
-* Choose a temperature range; explore variation  
-* Generate 3 versions; curate your favorite  
-* Explain your rules like a score or recipe  
-* Notice how constraints shape the aesthetic
-
-Stage text: Copy/paste rules:
-
-1. Single HTML with inline CSS+JS  
-2. Canvas only; no libraries  
-3. Grid ≥ 100 elements  
-4. Vary property by distance from center  
-5. Exactly one randomness source  
-6. Only 3 colors  
-7. Fill viewport  
-8. Animate with requestAnimationFrame
-
-Return HTML only
+* Experiment with max tokens (response length) and temperature (randomness, 0.0-2.0)
+* Try the same prompt with different settings:
+  * Temperature 0.1 (predictable) vs 1.8 (creative)
+  * Max tokens 1024 (concise) vs 4096 (detailed)
+* How do these parameters change the AI's creative output?
 
 ---
 
@@ -220,10 +212,10 @@ Stage text:
 
 ### **Links, citations, and prompts**
 
-* System prompts \+ points of departure: prompts.md  
-* Slide outline (markdown): slides.md  
-* Models (GLM 5 / Kimi K2.5): [https://ailab.gc.cuny.edu/models/](https://ailab.gc.cuny.edu/models/)  
-* Full sources list (Appendix D): see GitHub folder link below
+* System prompts + points of departure: [prompts](https://github.com/cuny-ai-lab/creative-coding/blob/main/prompts.md)
+* Slide outline: [slides](https://github.com/cuny-ai-lab/creative-coding/blob/main/slides.md)
+* Models (GLM 5 / Kimi K2.5): [ailab.gc.cuny.edu/models](https://ailab.gc.cuny.edu/models/)
+* Full sources list (Appendix D): [GitHub repository](https://github.com/cuny-ai-lab/creative-coding)
 
 Sources:
 
