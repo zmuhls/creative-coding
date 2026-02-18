@@ -227,16 +227,17 @@
         <h2>Describe an algorithm you already know</h2>
         <ul>
           <li>Write a routine in three steps or fewer</li>
-          <li>Name the shape: sequence, conditional, loop</li>
-          <li>See "rules executed by hand" as code</li>
-          <li>Share one example; spot the hidden logic</li>
+          <li>Rethink "rules executed by hand" as a kind of algorithm</li>
         </ul>
       </div>
       <div class="stage stageCenter" aria-label="Icebreaker prompt">
         <div class="stageInner">
-          <div class="stageTitle">In chat, post:</div>
-          <div class="stageBig">"Describe something you do by following steps… in three instructions or fewer."</div>
-          <div class="stageHint">Look for: "If X then Y" (conditional), "Repeat until done" (loop), "First A then B" (sequence).</div>
+          <div class="stageTitle">Prompt: In three steps or less, describe something you do in your everyday life and frame it as a conditional, a loop, or a sequence.</div>
+          <ul class="stageList" style="margin-top:18px;">
+            <li><strong>If X then Y (conditional):</strong> "If it's raining, grab an umbrella; otherwise, wear sunglasses."</li>
+            <li><strong>Repeat until done (loop):</strong> Wash the dishes step by step until the sink is empty.</li>
+            <li><strong>First A then B (sequence):</strong> Preheat the oven, mix the batter, pour it into a pan, then bake.</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -247,11 +248,10 @@
         <h1>Origins (1962-1965)</h1>
         <h2>Bell Labs + first computer art</h2>
         <ul>
-          <li>Place early computer art in Bell Labs era</li>
-          <li>Combine equations with pseudo-random variation</li>
+          <li>Historical roots of computer art during Bell Labs era</li>
+          <li>Mixed equations with pseudo-random variations</li>
           <li>Generate order first; introduce disorder gradually</li>
-          <li>Move from plotter output to public exhibitions</li>
-          <li>Click to re-roll the disorder</li>
+          <li>Moved from plotter demonstrations to public exhibitions</li>
         </ul>
       </div>
       <div class="stage" aria-label="Schotter stage"></div>
@@ -263,10 +263,9 @@
         <h1>Vera Molnar</h1>
         <h2>The "machine imaginaire"</h2>
         <ul>
-          <li>Define art as rules plus "a hint of disorder"</li>
+          <li>Art as a set of rules plus "a hint of disorder"</li>
           <li>Constrain a system; let chance disturb it</li>
-          <li>Treat constraints as the artwork's engine</li>
-          <li>Connect constraint prompts to Molnar's method</li>
+          <li>Treat constraints as principles for art-making</li>
           <li>Drag the interruption zone to disrupt the grid</li>
         </ul>
       </div>
@@ -281,8 +280,7 @@
         <ul>
           <li>Frames the browser as a portable art canvas</li>
           <li>Prefers portable, single-file artifacts</li>
-          <li>Keeps tools lightweight: no build step, no account</li>
-          <li>LLMs generate single-file artifacts that open in any browser</li>
+          <li>Keeps tools lightweight and portable</li>
         </ul>
       </div>
       <div class="stage stageCenter" aria-label="Web stack metaphors">
@@ -303,11 +301,10 @@
         <h1>Key Concept</h1>
         <h2>The creative coding triangle</h2>
         <ul>
-          <li>Map a piece across: Rules / Randomness / Interpretation</li>
-          <li>Shift the balance to change the work's feel</li>
-          <li>Translate to LLMs: system prompt / temperature / curation</li>
-          <li>Use the triangle to diagnose "why this output"</li>
-          <li>Drag the point to shift emphasis</li>
+          <li><strong>Rules</strong> / <strong>Randomness</strong> / <strong>Interpretation</strong></li>
+          <li>Rules: constraints and logic you set (loops, grids, conditionals)</li>
+          <li>Randomness: surprises you invite in (random values, noise, chance)</li>
+          <li>Interpretation: curatorial choices you make (color, scale, what to keep, what to throw away)</li>
         </ul>
       </div>
       <div class="stage" aria-label="Triangle stage"></div>
@@ -319,9 +316,10 @@
         <h1>Vibe Coding</h1>
         <h2>Prompts as prototypes</h2>
         <ul>
-          <li>Prototype with prompts; test in the browser</li>
+          <li>"Vibe coding" attributed to Andrej Karpathy</li>
+          <li>Prototype with prompts, then test in browser</li>
           <li>Generate fast; evaluate with your own eyes</li>
-          <li>Contrast: "no-review" vs reviewed iteration</li>
+          <li>"No-review" vs reviewed iteration</li>
           <li>Adopt the mode that matches your goal</li>
         </ul>
       </div>
@@ -334,8 +332,8 @@
         <h1>Spectrum</h1>
         <h2>Vibe → deliberate collaboration</h2>
         <ul>
-          <li>Place AI coding on a continuum of control</li>
-          <li>Move from one-shot → iterate → constrain</li>
+          <li>Place AI-based coding on a continuum of control</li>
+          <li>One-shot → iterate → constrain</li>
           <li>Decompose tasks to increase reflection (Xu et al., 2024)</li>
           <li>Design workflow to push toward deliberate choices</li>
         </ul>
@@ -349,9 +347,9 @@
         <h1>Prompt Anatomy</h1>
         <h2>Structure prompts for creative code</h2>
         <ul>
-          <li>Assign a role: creative coder + collaborator</li>
-          <li>Constrain the stack: Canvas + vanilla JS</li>
-          <li>Declare the look: monochrome, geometric, early-computer</li>
+          <li>Assign a role (e.g. "creative coder")</li>
+          <li>Constrain the stack: Canvas + vanilla JavaScript</li>
+          <li>Set the style: monochrome, geometric, early-computer</li>
           <li>Require motion + interaction: rAF + input</li>
           <li>Demand a runnable deliverable: single HTML only</li>
         </ul>
@@ -396,7 +394,6 @@ Output: return single HTML only (no markdown/explanation).</pre>
           <li>Paste the Activity 1 system prompt</li>
           <li>Set temperature 0.9; max tokens 4096</li>
           <li>Write one prompt; generate once; no edits</li>
-          <li>Save the HTML; run it locally</li>
           <li>Observe: what did the model assume?</li>
         </ul>
       </div>
@@ -442,7 +439,7 @@ Output: return single HTML only (no markdown/explanation).</pre>
     </section>
 
     <!-- Slide 14 -->
-    <section class="slide" data-artifact="reflection">
+    <section class="slide">
       <div class="content">
         <h1>Takeaways</h1>
         <h2>Keep what's portable</h2>
@@ -452,9 +449,17 @@ Output: return single HTML only (no markdown/explanation).</pre>
           <li>Share artifacts as single-page HTML sketches</li>
           <li>Treat curation as part of the creative act</li>
         </ul>
-        <p style="margin-top:20px; font-size:clamp(14px,1.5vw,18px); color:var(--muted);">Save the recipe: system prompt · model + temp + max tokens · the HTML file (with a date)</p>
       </div>
-      <div class="stage" aria-label="Activity reflection triangle"></div>
+      <div class="stage stageCenter" aria-label="Save the recipe">
+        <div class="stageInner">
+          <div class="stageListTitle">Save the recipe</div>
+          <ul class="stageList">
+            <li>System prompt</li>
+            <li>Model + temperature + max tokens</li>
+            <li>The HTML file (with a date)</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <!-- Slide 16 -->
@@ -463,8 +468,8 @@ Output: return single HTML only (no markdown/explanation).</pre>
         <h1>Resources</h1>
         <h2>Links, citations, and prompts</h2>
         <ul>
-          <li>System prompts + points of departure: <a href="https://github.com/zmuhls/creative-coding/blob/main/prompts.md" target="_blank" rel="noreferrer">prompts.md</a></li>
-          <li>Slide outline (markdown): <a href="https://github.com/zmuhls/creative-coding/blob/main/slides.md" target="_blank" rel="noreferrer">slides.md</a></li>
+          <li>System prompts + points of departure: <a href="https://github.com/zmuhls/creative-coding/blob/main/prompts.md" target="_blank" rel="noreferrer">github.com/zmuhls/creative-coding → prompts.md</a></li>
+          <li>Slide outline (markdown): <a href="https://github.com/zmuhls/creative-coding/blob/main/slides.md" target="_blank" rel="noreferrer">github.com/zmuhls/creative-coding → slides.md</a></li>
           <li>Models (GLM 5 / Kimi K2.5): <a href="https://ailab.gc.cuny.edu/models/" target="_blank" rel="noreferrer">ailab.gc.cuny.edu/models</a></li>
           <li>Full sources list (Appendix D): see GitHub folder link below</li>
         </ul>
