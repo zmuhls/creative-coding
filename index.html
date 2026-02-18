@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creative Coding with Generative AI</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/black.css">
+<style>
+  .reveal { font-family: 'Courier New', monospace; }
+  .reveal h1, .reveal h2, .reveal h3 { font-family: 'Courier New', monospace; text-transform: none; }
+  .reveal h2 { font-size: 1.4em; }
+  .reveal h3 { font-size: 1em; color: #aaa; }
+  .artifact-container { width: 100%; height: 360px; position: relative; overflow: hidden; margin-top: 10px; }
+  .reveal section { font-size: 0.7em; }
+  .reveal ul, .reveal ol { text-align: left; }
+  .reveal .small { font-size: 0.65em; color: #888; }
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- 0: Welcome -->
+<section>
+  <h2>10 PRINT CHR$(205.5+RND(1)); : GOTO 10</h2>
+  <p class="small">One line of code. An infinite maze. (Commodore 64, 1982)</p>
+  <div class="artifact-container" id="art-tenprint"></div>
+</section>
+
+<!-- 1: Icebreaker -->
+<section>
+  <h2>Describe an Algorithm You Already Know</h2>
+  <p>Think of something you do by following steps.<br>Describe it in <strong>three instructions or fewer</strong>.</p>
+  <ul>
+    <li>"If X, then Y" → <em>conditional</em></li>
+    <li>"Repeat until done" → <em>loop</em></li>
+    <li>"First A, then B, then C" → <em>sequence</em></li>
+  </ul>
+  <p class="small">Vera Molnar's <em>machine imaginaire</em>: executing algorithms by hand, before the computer.</p>
+</section>
+
+<!-- 2: Origins -->
+<section>
+  <h2>Bell Labs & the First Computer Art</h2>
+  <h3>1962–1965: Noll, Nees, Nake</h3>
+  <div class="artifact-container" id="art-schotter"></div>
+  <p class="small">Georg Nees, <em>Schotter</em> (1968–70). Disorder grows row by row.</p>
+</section>
+
+<!-- 3: Molnar -->
+<section>
+  <h2>The Machine Imaginaire</h2>
+  <h3>Vera Molnar (1924–2023)</h3>
+  <div class="artifact-container" id="art-molnar"></div>
+  <p class="small">Drag the void. Inspired by Molnar's <em>Interruptions</em>.</p>
+</section>
+
+<!-- 4: p5.js -->
+<section>
+  <h2>p5.js & the Browser as Canvas</h2>
+  <ul>
+    <li><strong>Processing</strong> (Reas & Fry, MIT 2001) → <strong>p5.js</strong> → browser</li>
+    <li>We use <strong>vanilla HTML/CSS/JS</strong> — no build step, no library, no account</li>
+    <li>LLMs generate <strong>single-file artifacts</strong> that open in any browser</li>
+    <li>Simon Willison's "HTML tools" pattern: self-contained, evergreen</li>
+  </ul>
+</section>
+
+<!-- 5: Triangle -->
+<section>
+  <h2>The Creative Coding Triangle</h2>
+  <div class="artifact-container" id="art-triangle"></div>
+  <p class="small">Drag the point. Rules = System Prompt · Randomness = Temperature · Interpretation = Human Curation</p>
+</section>
+
+<!-- 6: Vibe Coding -->
+<section>
+  <h2>What Is Vibe Coding?</h2>
+  <blockquote style="font-size:0.9em;">"Fully giving in to the vibes, embracing exponentials, and forgetting that the code even exists."<br><span class="small">— Andrej Karpathy, Feb 2025</span></blockquote>
+  <ul>
+    <li><strong>Vibe coding:</strong> don't review what the model produces</li>
+    <li><strong>LLM-assisted programming:</strong> thoughtfully read and iterate</li>
+  </ul>
+  <p class="small">— Simon Willison's distinction</p>
+</section>
+
+<!-- 7: Spectrum -->
+<section>
+  <h2>The Spectrum</h2>
+  <h3>From Vibe Coding to Deliberate Collaboration</h3>
+  <div class="artifact-container" id="art-spectrum"></div>
+  <p class="small">Xu et al. (2024): decomposed subtask invocation fosters deeper creative reflection.</p>
+</section>
+
+<!-- 8: Prompt Anatomy -->
+<section>
+  <h2>Anatomy of a Prompt</h2>
+  <ol style="font-size:0.9em;">
+    <li><strong>Role:</strong> "You are a creative coder who generates single-page HTML artifacts."</li>
+    <li><strong>Constraint:</strong> "Use only vanilla JavaScript — no external libraries."</li>
+    <li><strong>Aesthetic:</strong> "Monochrome, geometric, generative — early computer art."</li>
+    <li><strong>Technical:</strong> "Canvas API, full viewport, requestAnimationFrame."</li>
+    <li><strong>Output:</strong> "Return a single HTML file. No explanation — just code."</li>
+  </ol>
+</section>
+
+<!-- 9: Live Demo -->
+<section>
+  <h2>Live Demo: CUNY AI Lab Sandbox</h2>
+  <ul>
+    <li>Select a model → Open config panel</li>
+    <li>Enter system prompt → Set temperature</li>
+    <li>Demo: <strong>0.3</strong> vs <strong>1.0</strong> vs <strong>1.5</strong> on same prompt</li>
+    <li>Demo: max tokens = 256 → truncated output</li>
+    <li>Temperature = Molnar's "hint of disorder"</li>
+  </ul>
+  <p class="small">tools.ailab.gc.cuny.edu</p>
+</section>
+
+<!-- 10: Activity 1 -->
+<section>
+  <h2>Activity 1: One Prompt, One Artifact</h2>
+  <h3>Pure vibe coding · 10 min</h3>
+  <div class="artifact-container" id="art-starfield"></div>
+  <p class="small">Temp 0.9 · Max tokens 4096 · One prompt, no iteration.</p>
+</section>
+
+<!-- 11: Activity 2 -->
+<section>
+  <h2>Activity 2: Iterate and Refine</h2>
+  <h3>Iterative prompting · 15 min</h3>
+  <ul>
+    <li>Take your Activity 1 artifact and <strong>improve through conversation</strong></li>
+    <li>"Add trails" → "Change palette" → "Add a speed control"</li>
+    <li>Iterate <strong>at least 3 times</strong>. Test each version.</li>
+    <li>Generate → Test → Describe what's wrong → Regenerate</li>
+  </ul>
+  <p class="small">System prompt instructs model to explain choices and suggest 3 modifications.</p>
+</section>
+
+<!-- 12: Activity 3 -->
+<section>
+  <h2>Activity 3: Write the Rules</h2>
+  <h3>Constraint-based generation · the machine imaginaire · 15 min</h3>
+  <div class="artifact-container" id="art-constraint"></div>
+  <p class="small">Write your own system prompt. Define the rules. Send "Generate." Run 3× and select the best.</p>
+</section>
+
+<!-- 13: Reflection -->
+<section>
+  <h2>Reflection</h2>
+  <h3>Mapping the Activities to the Triangle</h3>
+  <div class="artifact-container" id="art-reflection"></div>
+  <p class="small">A1: high Interpretation · A2: balanced · A3: high Rules — consumer → architect</p>
+</section>
+
+<!-- 14: Takeaways -->
+<section>
+  <h2>What to Take With You</h2>
+  <ul>
+    <li><strong>Teaching:</strong> Three-activity scaffold (one-shot → iterative → constraint-based)</li>
+    <li><strong>Research:</strong> CUNY Sandbox — reproducible, privacy-respecting prototyping</li>
+    <li><strong>Practice:</strong> Single-page HTML = portable, hostable, shareable</li>
+  </ul>
+  <p style="margin-top:1em;"><strong>tools.ailab.gc.cuny.edu</strong></p>
+  <p class="small">Zach Muhlbauer & Stefano Morello · CUNY AI Lab</p>
+</section>
+
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+<script src="src/tenprint.js"></script>
+<script src="src/schotter.js"></script>
+<script src="src/molnar.js"></script>
+<script src="src/triangle.js"></script>
+<script src="src/spectrum.js"></script>
+<script src="src/starfield.js"></script>
+<script src="src/constraint-grid.js"></script>
+<script src="src/reflection.js"></script>
+<script>
+const slideArtifacts = {
+  0:  { id: 'art-tenprint',    fn: initTenprint },
+  2:  { id: 'art-schotter',    fn: initSchotter },
+  3:  { id: 'art-molnar',      fn: initMolnar },
+  5:  { id: 'art-triangle',    fn: initTriangle },
+  7:  { id: 'art-spectrum',    fn: initSpectrum },
+  10: { id: 'art-starfield',   fn: initStarfield },
+  12: { id: 'art-constraint',  fn: initConstraintGrid },
+  13: { id: 'art-reflection',  fn: initReflection }
+};
+const loaded = {};
+
+function activateSlide(idx) {
+  if (loaded[idx] || !slideArtifacts[idx]) return;
+  const { id, fn } = slideArtifacts[idx];
+  const el = document.getElementById(id);
+  if (el && fn) { loaded[idx] = true; fn(el); }
+}
+
+Reveal.initialize({
+  hash: true, transition: 'fade', backgroundTransition: 'fade',
+  width: 1200, height: 700
+}).then(() => {
+  activateSlide(Reveal.getIndices().h);
+  Reveal.on('slidechanged', e => activateSlide(e.indexh));
+});
+</script>
+</body>
+</html>
