@@ -1,6 +1,6 @@
 This workshop ties together creative coding and "vibe coding" with generative AI to guide participants in designing and creating a single-page creative coding artifact in a browser-based environment. You'll leave with a shareable prototype and practical strategies for bringing this approach into your teaching, research, or creative practice. 
 
-* [**https://milwrite.github.io/creative-coding/**](https://milwrite.github.io/creative-coding/#9)
+* [**https://cuny-ai-lab.github.io/creative-coding/**](https://cuny-ai-lab.github.io/creative-coding/)
 
 # **Slide 1**
 
