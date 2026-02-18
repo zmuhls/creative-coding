@@ -12,11 +12,14 @@ export function tenPrint(container) {
   let pauseUntil = 0;
 
   function caption() {
+    const captionH = Math.max(28, height * 0.06);
+    ctx.fillStyle = 'rgba(5,11,7,0.85)';
+    ctx.fillRect(0, height - captionH, width, captionH);
     const fontSize = Math.max(12, Math.min(width, height) * 0.028);
     ctx.font = `${fontSize}px ui-monospace, SFMono-Regular, Menlo, monospace`;
     ctx.fillStyle = 'rgba(255,255,255,0.5)';
     ctx.textAlign = 'center';
-    ctx.fillText('10 PRINT CHR$(205.5+RND(1)); : GOTO 10 (1982)', width / 2, height - fontSize);
+    ctx.fillText('10 PRINT CHR$(205.5+RND(1)); : GOTO 10 (1982)', width / 2, height - captionH * 0.3);
   }
 
   function clear() {
@@ -25,7 +28,7 @@ export function tenPrint(container) {
   }
 
   function applyStyle() {
-    ctx.strokeStyle = '#00FF41';
+    ctx.strokeStyle = '#5cb870';
     ctx.lineWidth = 2;
     ctx.lineCap = 'square';
   }
