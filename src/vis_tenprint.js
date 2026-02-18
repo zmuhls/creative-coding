@@ -1,7 +1,7 @@
 import { makeCanvas, rafLoop } from './util_canvas.js';
 
 // Slide 1 artifact: 10 PRINT-style maze.
-// Draws gradually (~4 seconds to fill), then holds.
+// Draws gradually (~4s), holds 5s with caption, then regenerates.
 export function tenPrint(container) {
   container.innerHTML = '';
   const { ctx, resize, destroy } = makeCanvas(container);
@@ -9,7 +9,8 @@ export function tenPrint(container) {
   let { width, height } = resize();
   const SIZE = 22;
   let x = 0, y = 0;
-  let done = false;
+  let phase = 'draw';   // 'draw' | 'hold'
+  let holdUntil = 0;
 
   function caption() {
     const captionH = Math.max(28, height * 0.06);
@@ -33,24 +34,31 @@ export function tenPrint(container) {
     ctx.lineCap = 'square';
   }
 
-  clear();
-  applyStyle();
+  function restart() {
+    x = 0;
+    y = 0;
+    phase = 'draw';
+    clear();
+    applyStyle();
+  }
+
+  restart();
 
   const ro = new ResizeObserver(() => {
     ({ width, height } = resize());
-    x = 0;
-    y = 0;
-    done = false;
-    clear();
-    applyStyle();
+    restart();
   });
   ro.observe(container);
 
-  const stop = rafLoop(() => {
-    if (done) return;
+  const stop = rafLoop((t) => {
+    if (phase === 'hold') {
+      if (t < holdUntil) return;
+      restart();
+      return;
+    }
 
-    // ~18 segments/frame → fills a typical stage in ~4 seconds.
-    for (let i = 0; i < 18; i++) {
+    // ~8 segments/frame → fills a typical stage in ~8–9 seconds.
+    for (let i = 0; i < 8; i++) {
       if (Math.random() > 0.5) {
         ctx.beginPath();
         ctx.moveTo(x, y);
@@ -66,7 +74,8 @@ export function tenPrint(container) {
       if (x >= width) { x = 0; y += SIZE; }
       if (y >= height) {
         caption();
-        done = true;
+        phase = 'hold';
+        holdUntil = t + 5000;
         return;
       }
     }
