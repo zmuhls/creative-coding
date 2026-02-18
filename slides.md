@@ -106,7 +106,7 @@ This workshop ties together creative coding and "vibe coding" with generative AI
 * Assign a role (e.g. “creative coder”)   
 * Constrain the stack: Canvas \+ vanilla JavaScript  
 * Set the style: monochrome, geometric, early-computer  
-* Require motion \+ interaction: rAF \+ input  
+* Require motion \+ interaction: animation loop \+ input  
 * Demand a runnable deliverable: single HTML only
 
 Stage text (example prompt scaffold):
